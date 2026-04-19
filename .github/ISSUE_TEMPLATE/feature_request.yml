@@ -1,0 +1,40 @@
+name: 機能要望
+description: 新しい機能を提案する
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: claude
+    attributes:
+      label: Claudeに実装を依頼
+      description: Claudeに依頼する場合はモデルを選択してください
+      options:
+        - 依頼しない
+        - "@claude /sonnet"
+        - "@claude /opus"
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい課題
+      description: どんな課題を解決したいですか？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どのような機能・変更を提案しますか？
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 検討した代替案
+      description: 他に検討した方法があれば記載してください
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足情報 (任意)
+      description: スクリーンショット・参考リンクなど

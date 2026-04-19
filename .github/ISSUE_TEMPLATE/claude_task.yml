@@ -1,0 +1,24 @@
+name: Claude Task
+description: Claudeに作業を依頼する
+labels: [claude]
+body:
+  - type: dropdown
+    id: claude
+    attributes:
+      label: 使用モデル
+      options:
+        - "@claude /sonnet"
+        - "@claude /opus"
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: 作業内容
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 補足情報

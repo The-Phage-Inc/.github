@@ -1,0 +1,59 @@
+name: バグ報告
+description: バグを報告する
+labels: [bug]
+body:
+  - type: dropdown
+    id: claude
+    attributes:
+      label: Claudeに修正を依頼
+      description: Claudeに依頼する場合はモデルを選択してください
+      options:
+        - 依頼しない
+        - "@claude /sonnet"
+        - "@claude /opus"
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: 何が起きましたか？
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 再現手順
+      description: どうすれば再現できますか？
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する挙動
+      description: 本来どうなるべきですか？
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の挙動
+      description: 実際にはどうなりましたか？
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境
+      description: OS・ブラウザ・バージョンなど
+      placeholder: |
+        - OS:
+        - ブラウザ:
+        - バージョン:
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット (任意)
