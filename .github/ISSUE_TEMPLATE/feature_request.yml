@@ -9,8 +9,8 @@ body:
       description: Claudeに依頼する場合はモデルを選択してください
       options:
         - 依頼しない
-        - "@claude /sonnet"
-        - "@claude /opus"
+        - "sonnet @claude"
+        - "opus @claude"
       default: 0
     validations:
       required: true

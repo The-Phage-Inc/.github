@@ -7,8 +7,8 @@ body:
     attributes:
       label: 使用モデル
       options:
-        - "@claude /sonnet"
-        - "@claude /opus"
+        - "sonnet @claude"
+        - "opus @claude"
       default: 0
     validations:
       required: true
